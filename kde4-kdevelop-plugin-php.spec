@@ -1,6 +1,6 @@
-%define		orgname		php
-%define		_kdevelopver	3.9.99
-%define		_prever		beta4
+%define		orgname		kdev-php
+%define		_kdevelopver	3.10.0
+%define		_prever		rc1
 %define		_state		unstable
 
 Summary:	PHP plugins for kdevelop
@@ -10,10 +10,10 @@ Version:	1.0
 Release:	0.%{_prever}.1
 License:	GPL
 Group:		X11/Development/Tools
-Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}-%{_prever}.tar.bz2
-# Source0-md5:	9a647e689b262df9332d7fd366737a9c
-Source1:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-docs-%{version}-%{_prever}.tar.bz2
-# Source1-md5:	d86274cf7f0ad1821ac1426b0d95aa8e
+Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{_prever}.tar.bz2
+# Source0-md5:	5e1e80f417afa958525ea682a309f764
+Source1:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-docs-%{_prever}.tar.bz2
+# Source1-md5:	9aa5926ca68c618ee87603619547898b
 URL:		http://www.kdevelop.org/
 BuildRequires:	kde4-kdevplatform-devel >= 0.9.97
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,7 +25,7 @@ PHP plugins for kdevelop.
 Wtyczki PHP dla kdevelop.
 
 %prep
-%setup -q -n %{orgname}-%{version}-%{_prever} -a1
+%setup -q -n %{orgname}-%{_prever} -a1
 
 %build
 install -d build
@@ -38,7 +38,7 @@ cd build
 %{__make}
 cd ../
 
-cd %{orgname}-docs-%{version}-%{_prever}
+cd %{orgname}-docs-%{_prever}
 install -d build
 cd build
 %cmake \
@@ -56,7 +56,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
-%{__make} -C %{orgname}-docs-%{version}-%{_prever}/build install \
+%{__make} -C %{orgname}-docs-%{_prever}/build install \
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
