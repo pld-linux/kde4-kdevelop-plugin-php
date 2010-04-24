@@ -1,6 +1,6 @@
 %define		orgname		kdev-php
-%define		_kdevelopver	3.10.0
-%define		_prever		rc1
+%define		_kdevelopver	3.10.1
+%define		_prever		rc2
 %define		_state		unstable
 
 Summary:	PHP plugins for kdevelop
@@ -11,9 +11,9 @@ Release:	0.%{_prever}.1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{_prever}.tar.bz2
-# Source0-md5:	5e1e80f417afa958525ea682a309f764
+# Source0-md5:	0f362c438711738b413b66bc20be82f5
 Source1:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-docs-%{_prever}.tar.bz2
-# Source1-md5:	9aa5926ca68c618ee87603619547898b
+# Source1-md5:	6a1a2c29ee8bd6d8c1b173d7b8f72518
 URL:		http://www.kdevelop.org/
 BuildRequires:	kde4-kdevplatform-devel >= 0.9.97
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
