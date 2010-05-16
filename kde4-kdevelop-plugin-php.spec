@@ -14,8 +14,12 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgn
 Source1:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-docs-%{version}.tar.bz2
 # Source1-md5:	9286ce9a000cb2292c613ad8a7d99cdd
 URL:		http://www.kdevelop.org/
-BuildRequires:	kde4-kdevplatform-devel >= 0.9.97
+BuildRequires:	QtTest-devel
+BuildRequires:	automoc4
 BuildRequires:	kde4-kdelibs-devel
+BuildRequires:	kde4-kdevplatform-devel >= 0.9.97
+BuildRequires:	qt4-build
+BuildRequires:	qt4-qmake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
