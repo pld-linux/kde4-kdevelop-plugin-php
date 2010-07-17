@@ -66,13 +66,15 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT \
 	kde_htmldir=%{_kdedocdir}
 
+%find_lang %{orgname} --all-name
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-%files
+%files -f kdevelop-php.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/kde4/kdevphpdocs.so
 %attr(755,root,root) %{_libdir}/kde4/kdevphpdocs_config.so
