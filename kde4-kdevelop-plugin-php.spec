@@ -22,6 +22,7 @@ BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdevplatform-devel >= %{version}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
+Requires:	kde4-kdevelop >= %{_kdevelopver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
