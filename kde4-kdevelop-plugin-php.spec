@@ -1,5 +1,5 @@
 %define		orgname		kdevelop-php
-%define		_kdevelopver	4.0.1
+%define		_kdevelopver	4.0.2
 %define		_state		stable
 %define		kdever		4.4.5
 %define		qtver		4.6.3
@@ -7,14 +7,14 @@
 Summary:	PHP plugins for kdevelop
 Summary(pl.UTF-8):	Wtyczki PHP dla kdevelop
 Name:		kde4-kdevelop-plugin-php
-Version:	1.0.1
+Version:	1.0.2
 Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	fa364fd31b09577c2a7ec5b476afc9e3
+# Source0-md5:	b049c8d4ab6e995d5fe7b03fa7b2f980
 Source1:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-docs-%{version}.tar.bz2
-# Source1-md5:	efe605d5e32bc6e4a0b1f3c322db00a5
+# Source1-md5:	58bfb8b2afda44621371659fbd4b6553
 URL:		http://www.kdevelop.org/
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	automoc4
