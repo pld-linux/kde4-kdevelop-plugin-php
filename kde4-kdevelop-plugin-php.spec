@@ -1,24 +1,25 @@
 %define		orgname		kdevelop-php
-%define		_kdevelopver	4.0.2
+%define		_kdevelopver	4.1.0
 %define		_state		stable
-%define		kdever		4.4.5
-%define		qtver		4.6.3
+%define		kdever		4.5.2
+%define		qtver		4.7.0
 
 Summary:	PHP plugins for kdevelop
 Summary(pl.UTF-8):	Wtyczki PHP dla kdevelop
 Name:		kde4-kdevelop-plugin-php
-Version:	1.0.2
+Version:	1.1.0
 Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	b049c8d4ab6e995d5fe7b03fa7b2f980
+# Source0-md5:	59f071263e88d0f3e6d907a3d7667ed8
 Source1:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-docs-%{version}.tar.bz2
-# Source1-md5:	58bfb8b2afda44621371659fbd4b6553
+# Source1-md5:	4084428c3913761b527d68e978df0724
 URL:		http://www.kdevelop.org/
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	automoc4
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
+BuildRequires:	kde4-kdevelop-pg-qt
 BuildRequires:	kde4-kdevplatform-devel >= %{version}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
@@ -87,7 +88,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/apps/kdevappwizard/templates
 %{_datadir}/apps/kdevappwizard/templates/simple_phpapp.tar.bz2
 %dir %{_datadir}/apps/kdevphpsupport
-%{_datadir}/apps/kdevphpsupport/phpfunctions.php.gz
+%{_datadir}/apps/kdevphpsupport/phpfunctions.php
 %{_datadir}/config.kcfg/phpdocssettings.kcfg
 %{_datadir}/kde4/services/kdevphpsupport.desktop
 %{_datadir}/kde4/services/kdevphpdocs.desktop
