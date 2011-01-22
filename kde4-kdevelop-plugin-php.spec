@@ -18,6 +18,7 @@ Source1:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgn
 URL:		http://www.kdevelop.org/
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	automoc4
+BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdevelop-pg-qt
 BuildRequires:	kde4-kdevplatform-devel >= %{version}
