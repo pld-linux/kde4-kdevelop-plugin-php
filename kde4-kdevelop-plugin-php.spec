@@ -1,29 +1,31 @@
 %define		orgname		kdevelop-php
-%define		_kdevelopver	4.1.0
+%define		_kdevelopver	4.2.0
 %define		_state		stable
-%define		kdever		4.5.2
-%define		qtver		4.7.0
+%define		kdever		4.6.0
+%define		qtver		4.7.1
 
 Summary:	PHP plugins for kdevelop
 Summary(pl.UTF-8):	Wtyczki PHP dla kdevelop
 Name:		kde4-kdevelop-plugin-php
-Version:	1.1.0
+Version:	1.2.0
 Release:	1
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}.tar.bz2
-# Source0-md5:	59f071263e88d0f3e6d907a3d7667ed8
+# Source0-md5:	fc48c194e7b87c9fd0850b2d7fc2a78b
 Source1:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-docs-%{version}.tar.bz2
-# Source1-md5:	4084428c3913761b527d68e978df0724
+# Source1-md5:	5e7c3c33d9e0767bbf3b3df02147dfae
 URL:		http://www.kdevelop.org/
 BuildRequires:	QtNetwork-devel >= %{qtver}
 BuildRequires:	automoc4
+BuildRequires:	cmake
 BuildRequires:	gettext-devel
 BuildRequires:	kde4-kdelibs-devel >= %{kdever}
 BuildRequires:	kde4-kdevelop-pg-qt
 BuildRequires:	kde4-kdevplatform-devel >= %{version}
 BuildRequires:	qt4-build >= %{qtver}
 BuildRequires:	qt4-qmake >= %{qtver}
+BuildRequires:	rpmbuild(macros) >= 1.600
 Requires:	kde4-kdevelop >= %{_kdevelopver}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -40,9 +42,6 @@ Wtyczki PHP dla kdevelop.
 install -d build
 cd build
 %cmake \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DSYSCONF_INSTALL_DIR=%{_sysconfdir} \
 	../
 %{__make}
 cd ../
@@ -51,9 +50,6 @@ cd %{orgname}-docs-%{version}
 install -d build
 cd build
 %cmake \
-	-DCMAKE_BUILD_TYPE=%{!?debug:Release}%{?debug:Debug} \
-	-DCMAKE_INSTALL_PREFIX=%{_prefix} \
-	-DSYSCONF_INSTALL_DIR=%{_sysconfdir} \
 	../
 %{__make}
 cd ../
