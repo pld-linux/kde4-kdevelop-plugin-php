@@ -78,6 +78,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/kde4/kdevphpdocs.so
 %attr(755,root,root) %{_libdir}/kde4/kdevphpdocs_config.so
 %attr(755,root,root) %{_libdir}/kde4/kdevphplanguagesupport.so
+%attr(755,root,root) %{_libdir}/kde4/kdevphpunitprovider.so
 %attr(755,root,root) %{_libdir}/libkdev4phpcompletion.so
 %attr(755,root,root) %{_libdir}/libkdev4phpduchain.so
 %attr(755,root,root) %{_libdir}/libkdev4phpparser.so
@@ -86,7 +87,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/apps/kdevappwizard/templates/simple_phpapp.tar.bz2
 %dir %{_datadir}/apps/kdevphpsupport
 %{_datadir}/apps/kdevphpsupport/phpfunctions.php
+%{_datadir}/apps/kdevphpsupport/phpunitdeclarations.php
 %{_datadir}/config.kcfg/phpdocssettings.kcfg
 %{_datadir}/kde4/services/kdevphpsupport.desktop
 %{_datadir}/kde4/services/kdevphpdocs.desktop
 %{_datadir}/kde4/services/kdevphpdocs_config.desktop
+%{_datadir}/kde4/services/kdevphpunitprovider.desktop
