@@ -8,7 +8,7 @@ Summary:	PHP plugins for kdevelop
 Summary(pl.UTF-8):	Wtyczki PHP dla kdevelop
 Name:		kde4-kdevelop-plugin-php
 Version:	1.7.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Development/Tools
 Source0:	ftp://ftp.kde.org/pub/kde/%{_state}/kdevelop/%{_kdevelopver}/src/%{orgname}-%{version}.tar.xz
